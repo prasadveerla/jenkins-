@@ -1,0 +1,14 @@
+node ("${nodeName}"){
+
+  
+   stage('veracodesubmit') 
+   {
+        
+       dir("${AppPath}") {
+                veracode applicationName: '"${VeracodeAppName}"', createSandbox: false, criticality: 'High',  debug: true, fileNamePattern: '*/*.zip', pHost: '', pPassword: '', pUser: '', replacementPattern: '', sandboxName: "${SandboxName}", scanExcludesPattern: '', scanIncludesPattern: "{IncludePattern}", scanName:"${ScanName}", teams: '', uploadExcludesPattern: '', uploadIncludesPattern: '**//**.tar',  useIDkey: true,  
+                vid: '27951041d7794e40d3c74ead798732db',  vkey: '7c66a7ef0e5083d0e4aeecae51b2d836cea27fed72d1cba4937d0e5f00ee439236038fffafb7f61f5d7ca6cb81c9ab438b8039ca09da863184fa44b5201d1c82', vpassword: '', vuser: ''
+        }
+     
+   }
+   
+}
